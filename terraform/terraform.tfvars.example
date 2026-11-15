@@ -1,0 +1,6 @@
+# terraform.tfvars 예시 (05 2절)
+# - 이 파일을 terraform.tfvars로 복사해서 값을 채운다. terraform.tfvars는 Git에 넣지 않는다(05 AI-05, .gitignore).
+# - 비밀값 변수는 없다(ADR-013). 실제 비밀값을 이 파일에 쓰지 않는다(05 AI-04).
+
+# 운영자 공인 IP(/32). 필수(기본값 없음). 실제 값은 security.md S-04에서 정한 값이다
+operator_ip_cidr = "<operator-ip>/32"

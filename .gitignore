@@ -1,0 +1,27 @@
+# 05 2절, AI-05(State와 실제 tfvars를 Git에 넣지 않음), CON-11·Q-31(Local State)
+
+# Local State (비밀값이 평문으로 들어간다, ADR-009)
+*.tfstate
+*.tfstate.*
+
+# 실제 값이 든 변수 파일 (terraform.tfvars.example은 포함)
+*.tfvars
+*.tfvars.json
+
+# 프로바이더·모듈 캐시
+.terraform/
+
+# 저장한 plan 파일 (변수 값이 들어갈 수 있다)
+tfplan
+*.tfplan
+
+# 실행 로그
+crash.log
+crash.*.log
+
+# .terraform.lock.hcl은 프로바이더 버전을 고정하므로 Git에 넣는다(versions.tf)
+
+# 개인 설정
+.vscode/markdown.css
+.vscode/settings.json
+.claude/settings.local.json
